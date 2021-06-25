@@ -1,0 +1,14 @@
+[Unit]
+Description=geth_linux_service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+ExecStart=/home/native_pte_ltd/geth_linux --config /home/native_pte_ltd/config.toml --datadir /home/native_pte_ltd/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0
+
+[Install]
+WantedBy=multi-user.target
