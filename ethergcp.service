@@ -1,0 +1,14 @@
+[Unit]
+Description=geth_linux_service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+ExecStart=geth --syncmode "fast"
+
+[Install]
+WantedBy=multi-user.target
