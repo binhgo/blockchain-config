@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=3
 User=root
-ExecStart=geth --syncmode "fast" --http --http.api personal,eth,net,web3  --http.addr 0.0.0.0
+ExecStart=geth --syncmode "fast" --http --http.api personal,eth,net,web3  --http.addr 0.0.0.0 --config /home/etherconfig.toml
 
 [Install]
 WantedBy=multi-user.target
