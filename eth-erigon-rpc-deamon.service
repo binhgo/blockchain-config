@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=3
 User=root
-ExecStart=./home/erigon/build/bin/rpcdaemon --datadir=/home/erigonchaindata --private.api.addr=0.0.0.0:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool,shh
+ExecStart=/home/erigon/build/bin/rpcdaemon --datadir=/home/erigonchaindata --private.api.addr=0.0.0.0:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool,shh
 
 [Install]
 WantedBy=multi-user.target
