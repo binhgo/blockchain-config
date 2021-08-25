@@ -1,0 +1,14 @@
+[Unit]
+Description=eth_erigon_archive_node_service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+ExecStart=./home/erigon/build/bin/erigon --datadir /home/erigonchaindata --private.api.addr=0.0.0.0:9090
+
+[Install]
+WantedBy=multi-user.target
