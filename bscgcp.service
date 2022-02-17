@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=10
 User=root
-ExecStart=/home/bscchain/geth_linux --config /home/bscchain/config.toml --datadir /home/bscchain/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0
+ExecStart=/home/bscchain/geth_linux --config /home/bscchain/config.toml --datadir /home/bscchain/node --diffsync --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0
 
 [Install]
 WantedBy=multi-user.target
